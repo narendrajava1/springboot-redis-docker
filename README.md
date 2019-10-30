@@ -32,32 +32,42 @@ Although Redis comes with written documentation, but in order to give idea to th
 
 SET (Setting a Key)
 127.0.0.1:6379> SET foo "Hello World"
-OK // setting a key,
+OK // setting a key
+
 GET (Getting a Key)
 127.0.0.1:6379> GET foo
-"Hello World" // getting a key,
+"Hello World" // getting a key
+
 DEL (Deleting a Key)
 127.0.0.1:6379> GET foo 
 "Hello World" // getting a key
+
 127.0.0.1:6379> DEL foo
 (integer) 1 // key just got deleted
+
 127.0.0.1:6379> GET foo
 (nil) // since key is deleted therefore, result is nil.
+
 SETEX (Setting a key with an expiry)
 127.0.0.1:6379> SETEX foo 40 "I said, Hello World!"
 OK // key has been set with 40 seconds as expiration
+
 TTL (Total Time left for a key that has a timeout)
 127.0.0.1:6379> TTL foo
 (integer) 36 // 36 seconds left to timeout
+
 PERSIST (Removing the timeout from key)
 127.0.0.1:6379> PERSIST foo
 (integer) 1 // turning the key from volatile to persistent (key won't expire)
+
 RENAME (Renaming the current existing key)
 127.0.0.1:6379> RENAME foo bar
 OK // renaming the key 'foo' as bar
+
 FLUSHALL (Flushing everything so far saved)
 127.0.0.1:6379> flushall
 OK // just got flushed
+
 So that was just the introductory part of what you can do with Redis. Redis is extremely powerful and even I am also using on daily basis for faster performance of data being transmitted between the applications.
 In short, Redis is cool.
 
