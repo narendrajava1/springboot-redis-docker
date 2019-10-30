@@ -32,10 +32,10 @@ Although Redis comes with written documentation, but in order to give idea to th
 
 SET (Setting a Key)
 127.0.0.1:6379> SET foo "Hello World"
-OK // setting a key
+OK // setting a key,
 GET (Getting a Key)
 127.0.0.1:6379> GET foo
-"Hello World" // getting a key
+"Hello World" // getting a key,
 DEL (Deleting a Key)
 127.0.0.1:6379> GET foo 
 "Hello World" // getting a key
